@@ -53,10 +53,27 @@ class _NewTransactionState extends State<NewTransaction> {
               controller: amountController,
               onSubmitted: (_) => _addNewTrxnFunct(),
             ),
-            FlatButton(
+            Container(
+              height: 70,
+              child: Row(
+                children: [
+                  Text('No Date Selected'),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Choose Date',
+                      style: AppBarTheme.of(context).toolbarTextStyle,
+                    ),
+                    //  style: ,
+                  )
+                ],
+              ),
+            ),
+            RaisedButton(
               onPressed: _addNewTrxnFunct,
               child: Text('Add Transaction'),
               color: Colors.purple,
+              //       textColor: ,
             )
           ],
         ),
